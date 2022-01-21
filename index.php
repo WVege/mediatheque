@@ -7,4 +7,10 @@ echo("Bonjour");
     <form action="albumBank.php">
         <button type="submit">Déposer un album</button>
     </form>
+
+    <h2>Ou Voulez-vous consulter la médiathèque ?</h2>
+    <form action="media.php">
+        <button type="submit">Découvrir</button>
+    </form>
+
 </body>

@@ -51,3 +51,14 @@ function createAlbum($nomA, $dtSortieA, $nomLabelA){
         die('Erreur insert album : ' . $e->getMessage());
     }
 }
+
+class ALBUM{
+    function getAllClasses(){
+        global $db;
+        $recup = 'SELECT * FROM ALBUM;';
+        $result = $db->query($recup);
+        $allClasses = $result->fetchAll();
+        return($allClasses);
+
+    }
+}
