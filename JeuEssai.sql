@@ -32,30 +32,13 @@ VALUES ("0", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul");
 -- (<numEtu, char(10),>, <numClas, char(6),>, <nomEtu, char(30),>, <prenomEtu, char(30),>, <dtNaisEtu, datetime,>
  ,<libRueEtu, char(32),>, <cdPostEtu, char(5),>, <libVilEtu, char(26),>, <tailleEtu, numeric(3,0),>)
 */
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (001, 100, 'AZNAVOUR', 'Choucou');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (002, 200, 'SOFIANE', 'Bibi');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (003, 300, 'GIMS', 'Maître');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (004, 400, 'BENT', 'Amel');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (005, 500, 'MAPIOUX', 'Sosomanes');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (006, 600, 'MARIA', 'Choucou');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (001, 100, 'AZNAVOUR', 'Choucou');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (002, 200, 'SOFIANE', 'Bibi');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (003, 300, 'GIMS', 'Maître');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (004, 400, 'BENT', 'Amel');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (005, 500, 'MAPIOUX', 'Sosomanes');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (006, 600, 'MARIA', 'Choucou');
 --
--- Etudiant aussi enseignant
---
-INSERT INTO ETUDIANT (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
-		VALUES
-(013, 'CLAS0002', 'La GAFFE', 'Gaston', '2030-01-01 00:00:00', "Rue des dormeurs", "75000","La Ville qui dort", 169);
--- ('WL45G', 'CLAS0002', 'La GAFFE', 'Gaston', '2030-01-01 00:00:00', "Rue des dormeurs", "75000","La Ville qui dort", 169);
---
--- Etudiant : next id à partir de la classe
---
-INSERT INTO ETUDIANT (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
-		VALUES
-(011, 'CLAS0002', 'Dubois', 'Tom', '2000-06-06 00:00:00', "Rue des Loulous", "75010","Paris", 179);
--- ('INFO001', 'CLAS0002', 'Dubois', 'Tom', '2000-06-06 00:00:00', "Rue des Loulous", "75010","Paris", 179);
-INSERT INTO ETUDIANT (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
-		VALUES
-(012, 'CLAS0003', 'Dumalin', 'Tim', '2000-11-11 00:00:00', "Rue des Riris", "75010","Paris", 171);
--- ('SRCB001', 'CLAS0003', 'Dumalin', 'Tim', '2000-11-11 00:00:00', "Rue des Riris", "75010","Paris", 171);
 
 /*
 --
