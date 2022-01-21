@@ -240,8 +240,8 @@ alter table ARTISTE add constraint FK_ASSOCIATION_3 foreign key (idGp)
 
 -- --------------------------------------------------------------------
 
-alter table ARTISTE add constraint FK_ASSOCIATION_4 foreign key (idGp)
-      references ALBUM (idGp) on delete cascade on update cascade;
+   alter table ARTISTE add constraint FK_ASSOCIATION_4 foreign key (idGp)
+         references ALBUM (idGp) on delete cascade on update cascade;
 
 -- --------------------------------------------------------------------
 
