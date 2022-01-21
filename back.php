@@ -34,14 +34,14 @@ function connectionUser(string $eMailUser) {
     print_r($user);
 }
 
-function createAlbum($nomA, $dtSortieA, $nomLabelA){
+function createAlbum($idAlb, $nomA, $dtSortieA, $nomLabelA){
     global $db;
 
     try {
         $db->beginTransaction();
-        $query = 'INSERT INTO album (nomA, dtSortieA, nomLabelA) VALUES (? ,? ,?);';
+        $query = 'INSERT INTO album (idAlb, nomA, dtSortieA, nomLabelA) VALUES (? ,? ,? ,?);';
         $request = $db -> prepare($query); 
-        $request -> execute([$nomA, $dtSortieA, $nomLabelA]); 
+        $request -> execute([$idAlb, $nomA, $dtSortieA, $nomLabelA]); 
         $db->commit();
         $request->closeCursor();
     }
@@ -60,5 +60,38 @@ class ALBUM{
         $allClasses = $result->fetchAll();
         return($allClasses);
 
+function createArtist($idArt, $nomArt, $prenomArt){
+    global $db;
+
+    try {
+        $db->beginTransaction();
+        $query = 'INSERT INTO artiste (idArt, nomArt, prenomArt) VALUES (? ,? ,?);';
+        $request = $db -> prepare($query); 
+        $request -> execute([$idArt, $nomArt, $prenomArt]); 
+        $db->commit();
+        $request->closeCursor();
+    }
+    catch (PDOException $e) {
+        $db->rollBack();
+        $request->closeCursor();
+        die('Erreur insert artist : ' . $e->getMessage());
+    }
+}
+
+function createGroupe($idGp, $nomGp, $dtCreaGp){
+    global $db;
+
+    try {
+        $db->beginTransaction();
+        $query = 'INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (? ,? ,?);';
+        $request = $db -> prepare($query); 
+        $request -> execute([$idGp, $nomGp, $dtCreaGp]); 
+        $db->commit();
+        $request->closeCursor();
+    }
+    catch (PDOException $e) {
+        $db->rollBack();
+        $request->closeCursor();
+        die('Erreur insert groupe : ' . $e->getMessage());
     }
 }
