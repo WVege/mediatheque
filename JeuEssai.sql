@@ -26,15 +26,13 @@ VALUES ("0", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul");
 --
 */
 INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (001, 100, 'AZNAVOUR', 'Choucou');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (002, 200, 'SOFIANE', 'Bibi');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (003, 300, 'GIMS', 'Maître');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (004, 400, 'BENT', 'Amel');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (005, 500, 'MAPIOUX', 'Sosomanes');
-INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (006, 600, 'MARIA', 'Choucou');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (002, 200, 'SOFIANE', 'Bibi');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (003, 300, 'GIMS', 'Maître');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (004, 400, 'BENT', 'Amel');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (005, 500, 'MAPIOUX', 'Sosomanes');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (006, 600, 'MARIA', 'Choucou');
+--
 
---
---
---
 /*
 --
 -- Table GROUPE
