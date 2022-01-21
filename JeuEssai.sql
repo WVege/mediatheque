@@ -3,19 +3,25 @@
 //
 // Jeu d'essai SQL de la médiathèque
 //
-// 					   		Le 16/01/22 23:37:00
+//
 */
 /*************************************************/
+<<<<<<< HEAD
 
 
 /* Base de données: mediatheq22 */
 
+=======
+--
+-- Base de données: mediatheq22
+--
+>>>>>>> 758c9bfcb693a27d31672a0b96f336862a5788a0
 USE mediatheq22;
-
 /*
 --
 -- Table GROUPE
 
+<<<<<<< HEAD
 */
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (100, 'Footprintsonthemoon', "2003-03-01");
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (200, 'none', "2010-03-31");
@@ -24,11 +30,14 @@ INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (400, 'RedHot', "1970-05-17");
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (500, 'SpiceGirls', "1840-06-27");
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (600, 'OMGLAFOLIE', "1540-04-17");
 
+=======
+>>>>>>> 758c9bfcb693a27d31672a0b96f336862a5788a0
 /*
 --
 -- Table ARTISTE
 --
 
+--
 */
 INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (666, 100, 'AZNAVOUR', 'Choucou');
 INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (777, 200, 'SOFIANE', 'Bibi');
@@ -61,13 +70,17 @@ INSERT INTO album (idAlb, idArt, idGp, nomA, dtSortieA, nomLabelA) VALUES (678, 
 --
 -- Table LIKEALBUM
 --
+--
 */
+INSERT INTO likealbum (eMailUser, idAlb) VALUES
+("qwegera@gmail", "7");
+
 
 /*
 --
 -- Table TITRE
 --
--- (<cdUe, char(3),>, <libUe, char(90),>)
+-- 
 */
 INSERT INTO titre (idTit, idAlb, nomTit, dureeTit) VALUES (1, 123, "Papaye", 3.50);
 INSERT INTO titre (idTit, idAlb, nomTit, dureeTit) VALUES (2, 234, "Papaye", 3.50);
@@ -82,10 +95,12 @@ INSERT INTO titre (idTit, idAlb, nomTit, dureeTit) VALUES (6, 678, "Papaye", 3.5
 --
 -- Table USER
 --
--- (<cdMod, char(4),>, <cdUe, char(3),>, <libMod, char(90),>)
+--
 */
-INSERT INTO user (eMailUser, nomEUser, prenomUser) VALUES ("qwegera@gmail.com", "Wegera", "Quentin");  
-      
+INSERT INTO user (eMailUser, nomEUser, prenomUser) VALUES
+("qwegera@gmail.com", "Wegera", "Quentin");
+INSERT INTO user (eMailUser, nomEUser, prenomUser) VALUES
+("auriane-mirana@gmail.com", "Sicard", "Auriane");      
 
 --
 -- --------------------------------------------------------
