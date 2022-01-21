@@ -11,7 +11,7 @@
 --
 */
 --
---
+-- Base de données: mediatheq22
 --
 USE mediatheq22;
 
@@ -32,42 +32,44 @@ VALUES ("0", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul");
 -- (<numEtu, char(10),>, <numClas, char(6),>, <nomEtu, char(30),>, <prenomEtu, char(30),>, <dtNaisEtu, datetime,>
  ,<libRueEtu, char(32),>, <cdPostEtu, char(5),>, <libVilEtu, char(26),>, <tailleEtu, numeric(3,0),>)
 */
-INSERT INTO artiste (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
+INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (001, 100, 'AZNAVOUR', 'Choucou');
+INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (002, 200, 'SOFIANE', 'Bibi');
+INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (003, 300, 'GIMS', 'Maître');
+INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (004, 400, 'BENT', 'Amel');
+INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (005, 500, 'MAPIOUX', 'Sosomanes');
+INSERT INTO ARTISTE (idArt, idGp, nomArt, prenomArt) VALUES (006, 600, 'MARIA', 'Choucou');
+--
+-- Etudiant aussi enseignant
+--
+INSERT INTO ETUDIANT (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
 		VALUES
-(001, 'CLAS0005', 'BOIS', 'Mimi', '2005-03-11 00:00:00', "Bat D Rue des copains d'abord", "02000", "SOISSONS",169);
+(013, 'CLAS0002', 'La GAFFE', 'Gaston', '2030-01-01 00:00:00', "Rue des dormeurs", "75000","La Ville qui dort", 169);
+-- ('WL45G', 'CLAS0002', 'La GAFFE', 'Gaston', '2030-01-01 00:00:00', "Rue des dormeurs", "75000","La Ville qui dort", 169);
+--
+-- Etudiant : next id à partir de la classe
+--
+INSERT INTO ETUDIANT (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
+		VALUES
+(011, 'CLAS0002', 'Dubois', 'Tom', '2000-06-06 00:00:00', "Rue des Loulous", "75010","Paris", 179);
+-- ('INFO001', 'CLAS0002', 'Dubois', 'Tom', '2000-06-06 00:00:00', "Rue des Loulous", "75010","Paris", 179);
+INSERT INTO ETUDIANT (numEtu, numClas, nomEtu, prenomEtu, dtNaisEtu, libRueEtu, cdPostEtu, libVilEtu, tailleEtu)
+		VALUES
+(012, 'CLAS0003', 'Dumalin', 'Tim', '2000-11-11 00:00:00', "Rue des Riris", "75010","Paris", 171);
+-- ('SRCB001', 'CLAS0003', 'Dumalin', 'Tim', '2000-11-11 00:00:00', "Rue des Riris", "75010","Paris", 171);
+
 /*
 --
 -- Table GROUPE
 --
 -- (<dtCtrl, datetime,>)
 */
-INSERT INTO DATE (dtCtrl) VALUES ('2012-11-09 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-01 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-12 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-12 09:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-12 11:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-13 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-17 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-18 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-01-11 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-01-13 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-01-17 00:00:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-02-22 14:30:00');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-12-12 00:00:00');
---
-INSERT INTO DATE (dtCtrl) VALUES ('2012-11-09 00:45:40');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-01 05:00:40');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-12 22:20:59');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-12 09:00:12');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-12 11:00:17');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-13 05:05:05');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-17 07:00:33');
-INSERT INTO DATE (dtCtrl) VALUES ('2012-12-18 03:00:04');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-01-11 08:10:18');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-01-13 14:06:19');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-01-17 13:00:35');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-02-22 14:30:56');
-INSERT INTO DATE (dtCtrl) VALUES ('2013-12-12 20:04:07');
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (100);
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (200);
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (300);
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (400);
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (500);
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (600);
+
 
 /*
 --
