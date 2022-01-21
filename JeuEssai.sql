@@ -3,21 +3,17 @@
 //
 // Jeu d'essai SQL de la médiathèque
 //
-// 							Le 16/01/22 23:37:00
+// 					   		Le 16/01/22 23:37:00
 */
 /*************************************************/
-/* 
---	Gestion des notes en ne respectant pas les CIR
---	BDD MySQL
+/*
+--
+--
 */
 --
--- Base de données: `GESTIONNOTES`
+--
 --
 USE mediatheq22;
-
-/*
--- Ne Respectant Pas les contraintes d'intégrité référentielle
-*/
 
 /*
 --
@@ -25,12 +21,8 @@ USE mediatheq22;
 --
 -- (<numClas, char(6),>, <libClas, char(60),>)
 */
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0001", "1ère année INFO Talence");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0002", "2ème année INFO Talence");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0003", "1ère année MMI Bordeaux");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0004", "2ème année MMI Bordeaux");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0005", "LP Média Planning Bordeaux");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0006", "LP MIAMI Tarbes");
+INSERT INTO CLASSE (idAlb, idArt, idGp, nomA, dtSortieA, nomLabelA) VALUES ("0", "", "", "Sans Chantilly", "");
+
 
 /*
 --
