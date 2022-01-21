@@ -17,7 +17,7 @@ USE mediatheq22;
 -- (<numClas, char(6),>, <libClas, char(60),>)
 */
 INSERT INTO album (idAlb, idArt, idGp, nomA, dtSortieA, nomLabelA) 
-VALUES ("0", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul");
+VALUES ("", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul"); --CODE idAlb : On met le chiffre 1 au début quand ça concerne un album ?
 
 /*
 --
@@ -25,7 +25,7 @@ VALUES ("0", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul");
 --
 --
 */
-INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (001, 100, 'AZNAVOUR', 'Choucou');
+INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (001, 100, 'AZNAVOUR', 'Choucou'); --CODE idArt : On met le chiffre 2 au début quand ça concerne un artiste ?
 INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (002, 200, 'SOFIANE', 'Bibi');
 INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (003, 300, 'GIMS', 'Maître');
 INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (004, 400, 'BENT', 'Amel');
@@ -39,7 +39,7 @@ INSERT INTO artiste (idArt, idGp, nomArt, prenomArt) VALUES (006, 600, 'MARIA', 
 --
 -- (<dtCtrl, datetime,>)
 */
-INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (100);
+INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (100); --CODE idGp : Mettons le chiffre 3 au début quand ça concerne un groupe
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (200);
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (300);
 INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (400);
@@ -63,7 +63,7 @@ INSERT INTO likealbum (eMailUser, idAlb) VALUES
 --
 -- 
 */
-INSERT INTO titre (idTit, idAlb, nomTit, dureeTit) 
+INSERT INTO titre (idTit, idAlb, nomTit, dureeTit) --CODE idTit : Mettons le chiffre 4 au début quand ça concerne un titre 	
 VALUES ("0", "0", "Papaye", "3.50");
 
 
