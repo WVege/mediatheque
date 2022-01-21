@@ -1,2 +1,4 @@
 <?php
-echo("SI CA MARCHE JE SUIS TROP CHAUD");
+// require_once __DIR__ . '../form.php';
+
+echo("Bonjour " . urldecode($_COOKIE["firstname"]));
