@@ -1,0 +1,2 @@
+<?php
+echo("SI CA MARCHE JE SUIS TROP CHAUD");
