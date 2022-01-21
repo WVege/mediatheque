@@ -3,12 +3,12 @@
 //
 // Jeu d'essai SQL de la médiathèque
 //
-// 							Le 16/01/22 23:37:00
+// 					   		Le 16/01/22 23:37:00
 */
 /*************************************************/
-/* 
---	Gestion des notes en ne respectant pas les CIR
---	BDD MySQL
+/*
+--
+--
 */
 --
 -- Base de données: mediatheq22
@@ -16,21 +16,14 @@
 USE mediatheq22;
 
 /*
--- Ne Respectant Pas les contraintes d'intégrité référentielle
-*/
-
-/*
 --
 -- Table ALBUM
 --
 -- (<numClas, char(6),>, <libClas, char(60),>)
 */
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0001", "1ère année INFO Talence");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0002", "2ème année INFO Talence");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0003", "1ère année MMI Bordeaux");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0004", "2ème année MMI Bordeaux");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0005", "LP Média Planning Bordeaux");
-INSERT INTO CLASSE (numClas, libClas) VALUES ("CLAS0006", "LP MIAMI Tarbes");
+INSERT INTO album (idAlb, idArt, idGp, nomA, dtSortieA, nomLabelA) 
+VALUES ("0", "0", "0", "Sans Chantilly", "20/10/2010", "Universeul");
+
 
 /*
 --
@@ -88,27 +81,7 @@ INSERT INTO groupe (idGp, nomGp, dtCreaGp) VALUES (600);
 INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
 (001, 'DUPONT', 'Jean', '1978-12-12 00:00:00', '3, rue des Roses', '75010', 'PARIS');
 -- ('2ZQ4', 'DUPONT', 'Jean', '1978-12-12 00:00:00', '3, rue des Roses', '75010', 'PARIS');
-INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
-(002, 'SMITH', 'Adams', '1976-06-06 00:00:00','33, rue des requêtes', '33000', 'BORDEAUX');
--- ('76D1', 'SMITH', 'Adams', '1976-06-06 00:00:00','33, rue des requêtes', '33000', 'BORDEAUX');
-INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
-(003, 'DURANT', 'Julie', '1970-12-22 00:00:00','Rue des tulipes vertes', '33000', 'BORDEAUX');
--- ('CH91', 'DURANT', 'Julie', '1970-12-22 00:00:00','Rue des tulipes vertes', '33000', 'BORDEAUX');
-INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
-(004, 'DUBOIS', 'Jules', '1980-11-11 00:00:00','Place des Fêtes', '75019', 'PARIS');
--- ('F67A', 'DUBOIS', 'Jules', '1980-11-11 00:00:00','Place des Fêtes', '75019', 'PARIS');
-INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
-(005, 'FILIBERT', 'Alex', '1999-09-09 00:00:00','2, Boulevard des essais', '33110', 'LE BOUSCAT');
--- ('MM77', 'FILIBERT', 'Alex', '1999-09-09 00:00:00','2, Boulevard des essais', '33110', 'LE BOUSCAT');
-INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
-(006, 'La ROUSSE', 'Julie', '1981-05-05 00:00:00','Avenue de la BD', '33700', 'MÉRIGNAC');
--- ('W8L9', 'La ROUSSE', 'Julie', '1981-05-05 00:00:00','Avenue de la BD', '33700', 'MÉRIGNAC');
---
--- Enseignant qui deviendra etudiant
---
-INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostEns, libVilEns) VALUES
-(013, 'La Belle', 'Cathy', '1930-12-12 00:00:00','Avenue de la Belle Cathy', '75010', 'PARIS');
--- ('WL45G', 'La Belle', 'Cathy', '1930-12-12 00:00:00','Avenue de la Belle Cathy', '75010', 'PARIS');
+
 
 /*
 --
@@ -116,12 +89,9 @@ INSERT INTO ENSEIGNANT (numEns, nomEns, prenomEns, dtNaisEns, libRueEns, cdPostE
 --
 -- (<cdUe, char(3),>, <libUe, char(90),>)
 */
-INSERT INTO UE (cdUe, libUe) VALUES
-('UE1', "Communication, culture et connaissance de l'environnement socio-économique");             
-INSERT INTO UE (cdUe, libUe) VALUES
-('UE2', "Culture technologique et développement multimédia");             
-INSERT INTO UE (cdUe, libUe) VALUES
-('UE3', "Mise en situation professionnelle");
+INSERT INTO titre (idTit, idAlb, nomTit, dureeTit) 
+VALUES ("0", "0", "Papaye", "3.50");
+
 
 /*
 --
@@ -129,26 +99,8 @@ INSERT INTO UE (cdUe, libUe) VALUES
 --
 -- (<cdMod, char(4),>, <cdUe, char(3),>, <libMod, char(90),>)
 */
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('CIM', "UE2", "Création et intégration des médias numériques");             
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('ECR', "UE1", "Esthétique, écritures, langages et communication");      
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('INF', "UE2", "Outils et méthodes informatiques pour le multimédia");         
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('LCI', "UE1", "Langues et communication interculturelle");                    
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('PRJ', "UE1", "Conduite de projet, connaissance des organisations, PPP");   
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('RES', "UE2", "Réseaux et services sur réseaux");                             
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('SCI', "UE2", "Culture scientifique et traitement de l'information");         
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('STA', "UE3", "Stages");                                                     
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('TIC', "UE1", "Théories de l'information de la communication");               
-INSERT INTO MODULE (cdMod, cdUe, libMod) VALUES
-('TUT', "UE3", "Projet tuteuré");                       
+INSERT INTO user (eMailUser, nomEUser, prenomUser) VALUES
+("qwegera@gmail.com", "Wegera", "Quentin");           
 
 --
 -- --------------------------------------------------------
